@@ -1,0 +1,88 @@
+﻿@model WebAPI_student.Models.tbl_student_marks
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tbl_student_marks</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.student_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.student_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tamil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tamil)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.english)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.english)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.maths)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maths)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.science)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.science)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.social_science)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.social_science)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.percentage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.percentage)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

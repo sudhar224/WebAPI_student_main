@@ -1,0 +1,75 @@
+﻿@model IEnumerable<WebAPI_student.Models.tbl_student_marks>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.student_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tamil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.english)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.maths)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.science)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.social_science)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.total)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.percentage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.student_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tamil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.english)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.maths)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.science)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.social_science)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.total)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.percentage)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
